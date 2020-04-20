@@ -389,6 +389,19 @@ namespace OpenRCT2
                 }
             }
 
+            if (is_running_in_wine())
+            {
+                std::string wineWarning = _localisationService->GetString(STR_WINE_NOT_RECOMMENDED);
+                if (gOpenRCT2Headless)
+                {
+                    Console::Error::WriteLine(wineWarning.c_str());
+                }
+                else
+                {
+                    _uiContext->ShowMessageBox(wineWarning);
+                }
+            }
+
             if (!gOpenRCT2Headless)
             {
                 _uiContext->CreateWindow();

@@ -3918,8 +3918,10 @@ enum
 
     STR_TILE_INSPECTOR_WALL_ANIMATION_FRAME = 6367,
 
+    STR_WINE_NOT_RECOMMENDED = 6368,
+
     // Have to include resource strings (from scenarios and objects) for the time being now that language is partially working
-    STR_COUNT = 32768
+    STR_COUNT = 32769
 };
 
 #endif

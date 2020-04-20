@@ -123,6 +123,7 @@ uint8_t platform_get_locale_measurement_format();
 uint8_t platform_get_locale_temperature_format();
 uint8_t platform_get_locale_date_format();
 bool platform_process_is_elevated();
+bool is_running_in_wine();
 bool platform_get_steam_path(utf8* outPath, size_t outSize);
 std::string platform_get_rct1_steam_dir();
 std::string platform_get_rct2_steam_dir();

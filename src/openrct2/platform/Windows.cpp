@@ -693,6 +693,17 @@ void platform_remove_file_associations()
     SHChangeNotify(SHCNE_ASSOCCHANGED, SHCNF_IDLIST, nullptr, nullptr);
 }
 
+bool is_running_in_wine()
+{
+    HMODULE ntdllMod = GetModuleHandle (L"ntdll.dll");
+
+    if (ntdllMod && GetProcAddress (ntdllMod, "wine_get_version"))
+    {
+        return true;
+    }
+    return false;
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
